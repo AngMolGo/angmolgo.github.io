@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Welcome to Lagrange!"
-author: "Paul Le"
+title: "Puto el que lo lea!"
+author: "AngMolGo"
 categories: journal
 tags: [documentation,sample]
 image: mountains.jpg
