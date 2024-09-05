@@ -8,7 +8,8 @@ RUN apt-get update  -y && \
     apt-get install -y    \
     git                   \
     ruby-full             \
-    build-essential
+    build-essential       \
+    nodejs
 
 ### Hacemos el cambio de directorio
 WORKDIR /app
@@ -18,5 +19,3 @@ CMD ["/bin/bash"]
 
 # Exponemos el puerto interno del contenedor al puerto del servidor para poder externarlo a la red local
 EXPOSE 4000
-
-
