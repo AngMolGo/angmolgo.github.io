@@ -140,9 +140,9 @@
 
   // Puedes agregar más reglas específicas aquí
   font-family: $sans-serif; // Cambia a la fuente deseada
-  font-size: $type-size-5; // Cambia el tamaño de la letra
-  color: #333; // Cambia el color de la letra (ajusta el valor de color a tu preferencia)
-  font-weight: normal; // Cambia el grosor de la letra (normal, bold, etc.)
+  font-size: 40px; // Cambia el tamaño de la letra
+  color: #0eca1b; // Cambia el color de la letra (ajusta el valor de color a tu preferencia)
+  font-weight: bold; // Cambia el grosor de la letra (normal, bold, etc.)
 
   @include breakpoint($large) {
     margin-top: 10px;
