@@ -139,13 +139,13 @@
   margin: 0;
 
   // Puedes agregar más reglas específicas aquí
-  font-family: $sans-serif; // Cambia a la fuente deseada
+  font-family: "Quattrocento Sans", sans-serif; // Cambia a la fuente deseada
   font-size: 40px; // Cambia el tamaño de la letra
-  color: #0eca1b; // Cambia el color de la letra (ajusta el valor de color a tu preferencia)
+  color: #999; // Cambia el color de la letra (ajusta el valor de color a tu preferencia)
   font-weight: bold; // Cambia el grosor de la letra (normal, bold, etc.)
 
   @include breakpoint($large) {
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 10px;
   }
 }
