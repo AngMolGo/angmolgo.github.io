@@ -271,6 +271,8 @@ defaults:
       author_profile: true
       share: true
       comment: true
+      outline_style: "10px solid red"
+      margin_size: "15px"
   # _talks
   - scope:
       path: ""
