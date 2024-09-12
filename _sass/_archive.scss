@@ -111,8 +111,8 @@
     margin: 15px;
     border-radius: 1px; // Cambia este valor al radio de esquina que desees
     height: auto; // Mantiene la proporción de la imagen
-    max-width: 300px; // Tamaño máximo para la imagen
-    max-height: 500px; // Tamaño máximo para la imagen
+    max-width: 600px; // Tamaño máximo para la imagen
+    max-height: 1000px; // Tamaño máximo para la imagen
     object-fit: cover; // Ajusta la imagen para cubrir el área del contenedor sin distorsión
   }
 }
