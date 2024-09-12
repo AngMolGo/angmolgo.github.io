@@ -24,7 +24,7 @@ author:
   avatar           : "profile.png"
   name             : "José Ángel Molina González"
   pronouns         : "Ing. Mecatrónico" # example: "she/her"  
-  bio              : "Hi, I'm Angel"
+  bio              : #"Hi, I'm Angel"
   location         : "Mexico City"
   employer         : "Facultad de Ingeniería | UNAM"
   uri              : # URL
