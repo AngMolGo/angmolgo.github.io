@@ -107,7 +107,9 @@
   }
 
   img{
-    border-radius: 50%;
+    outline: 10px solid #605070;
+    margin: 15px;
+    border-radius: 15px; // Cambia este valor al radio de esquina que desees
   }
 }
 
