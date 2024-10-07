@@ -7,6 +7,8 @@ redirect_from:
   - /about.html
 ---
 
+## Mantenimiento
+
 ### -> ¡Lo siento! Mi sitio web está en mantenimiento.
 
 ### -> Sorry! My web site is under maintenance.
