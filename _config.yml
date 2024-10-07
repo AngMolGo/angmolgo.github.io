@@ -271,6 +271,7 @@ defaults:
       author_profile: true
       share: true
       comment: true
+      ### Agrego esto:
       outline_style: "10px solid red"
       margin_size: "15px"
   # _talks
