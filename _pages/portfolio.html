@@ -9,6 +9,7 @@ author_profile: true
 
 
 {% for post in site.portfolio %}
-  {% include archive-single.html %}
+  {% if post.language == 'es' %} {% include archive-single.html %} {% endif %}
 {% endfor %}
 
+<p> hola mundo</p>

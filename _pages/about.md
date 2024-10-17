@@ -5,6 +5,7 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+language: es
 ---
 
 ### -> ¡Lo siento! Mi sitio web está en mantenimiento.
