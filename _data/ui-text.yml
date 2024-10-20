@@ -74,7 +74,7 @@ es: &DEFAULT_ES
   feed_label                 : "Feed"
   powered_by                 : "Creado por"
   website_label              : "Sitio web"
-  email_label                : "Correo"
+  email_label                : "angmolgo@gmail.com"
   recent_posts               : "Entradas recientes"
   undefined_wpm              : "Parámetro words_per_minute (palabras por minuto) no definido en _config.yml"
   comment_form_info          : "No se publicará tu correo electrónico. Véanse marcados los campos obligatorios"
@@ -118,7 +118,7 @@ fr: &DEFAULT_FR
   feed_label                 : "Flux"
   powered_by                 : "Propulsé par"
   website_label              : "Site"
-  email_label                : "Email"
+  email_label                : "angmolgo@gmail.com"
   recent_posts               : "Posts récents"
   undefined_wpm              : "Le paramètre words_per_minute n'est pas défini dans _config.yml"
   comment_form_info          :

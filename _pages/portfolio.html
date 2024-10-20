@@ -7,9 +7,104 @@ author_profile: true
 
 {% include base_path %}
 
-
+<!-- Loop para mostrar los posts, agregando clases según el idioma -->
 {% for post in site.portfolio %}
-  {% if post.language == 'es' %} {% include archive-single.html %} {% endif %}
+  {% if post.language == 'es' %}
+    <div class="post lang-es">
+      {% include archive-single.html %}
+    </div>
+  {% elsif post.language == 'en' %}
+    <div class="post lang-en" style="display:none;">
+      {% include archive-single.html %}
+    </div>
+  {% elsif post.language == 'fr' %}
+    <div class="post lang-fr" style="display:none;">
+      {% include archive-single.html %}
+    </div>
+  {% elsif post.language == 'jp' %}
+    <div class="post lang-jp" style="display:none;">
+      {% include archive-single.html %}
+    </div>
+  {% endif %}
 {% endfor %}
 
-<p> hola mundo</p>
+<!-- Agregamos un script para cambiar el idioma dinámicamente -->
+<script>
+  // Función para obtener los parámetros de la URL
+  function getParameterByName(name) {
+      var url = window.location.href;
+      name = name.replace(/[\[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+      var results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  // Obtener el parámetro 'lang' de la URL
+  var lang = getParameterByName('lang');
+
+  // Función para mostrar u ocultar contenido basado en el idioma
+  function cambiarIdioma(lang) {
+      if (lang === 'es') {
+          // Mostrar posts en inglés
+          document.querySelectorAll('.lang-es').forEach(function(el) {
+              el.style.display = 'block';
+          });
+          document.querySelectorAll('.lang-en').forEach(function(el) {
+              el.style.display = 'none';
+          });
+          document.querySelectorAll('.lang-fr').forEach(function(el) {
+              el.style.display = 'none';
+          });
+          document.querySelectorAll('.lang-jp').forEach(function(el) {
+              el.style.display = 'none';
+          });
+      } else if (lang === 'en') {
+          // Mostrar posts en español (idioma por defecto)
+          document.querySelectorAll('.lang-es').forEach(function(el) {
+              el.style.display = 'none';
+          });
+          document.querySelectorAll('.lang-en').forEach(function(el) {
+              el.style.display = 'block';
+          });
+          document.querySelectorAll('.lang-fr').forEach(function(el) {
+              el.style.display = 'none';
+          });
+          document.querySelectorAll('.lang-jp').forEach(function(el) {
+              el.style.display = 'none';
+          });
+      } else if (lang === 'fr') {
+          // Mostrar posts en español (idioma por defecto)
+          document.querySelectorAll('.lang-es').forEach(function(el) {
+              el.style.display = 'none';
+          });
+          document.querySelectorAll('.lang-en').forEach(function(el) {
+              el.style.display = 'none';
+          });
+          document.querySelectorAll('.lang-fr').forEach(function(el) {
+              el.style.display = 'block';
+          });
+          document.querySelectorAll('.lang-jp').forEach(function(el) {
+              el.style.display = 'none';
+          });
+      } else if (lang === 'jp') {
+          // Mostrar posts en español (idioma por defecto)
+          document.querySelectorAll('.lang-es').forEach(function(el) {
+              el.style.display = 'none';
+          });
+          document.querySelectorAll('.lang-en').forEach(function(el) {
+              el.style.display = 'none';
+          });
+          document.querySelectorAll('.lang-fr').forEach(function(el) {
+              el.style.display = 'none';
+          });
+          document.querySelectorAll('.lang-jp').forEach(function(el) {
+              el.style.display = 'block';
+          });
+      }
+  }
+
+  // Cambiar idioma basado en el parámetro de la URL (por defecto 'es')
+  cambiarIdioma(lang);
+</script>
