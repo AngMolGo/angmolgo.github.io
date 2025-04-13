@@ -1,6 +1,6 @@
 page                       : "Page"
-pagination_previous        : "Previous"
-pagination_next            : "Next"
+pagination_previous        : "Previo"
+pagination_next            : "Siguiente"
 breadcrumb_home_label      : "Home"
 breadcrumb_separator       : "/"
 toc_label                  : "On This Page"

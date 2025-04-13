@@ -61,6 +61,38 @@ layout: default
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[page.language].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+      
+        <script>
+          // Función para obtener los parámetros de la URL
+          function getParameterByName(name) {
+            const url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+            const results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+          }
+        
+          // Obtener el idioma desde el parámetro 'lang', o usar 'es' como predeterminado
+          const selectedLang = getParameterByName('lang') || 'es';
+        
+          // Función para cambiar el idioma visible
+          function cambiarIdioma(lang) {
+            const allLangs = ['es', 'en', 'fr', 'jp'];
+            allLangs.forEach(function(l) {
+              const elements = document.querySelectorAll('.post-lang-' + l);
+              elements.forEach(function(el) {
+                el.style.display = (l === lang) ? 'block' : 'none';
+              });
+            });
+          }
+        
+          // Ejecutar el cambio de idioma
+          cambiarIdioma(selectedLang);
+        </script>
+        
+
       </section>
 
       <footer class="page__meta">

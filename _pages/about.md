@@ -18,9 +18,10 @@ redirect_from:
 
 {% endcapture %}
 
-<div class="lang-es">
-  {{ lang_es | markdownify }}
-</div>
+
+<section lang="es" class="post-lang post-lang-es">
+{{ lang_es | markdownify }}
+</section>
 
 <!-------------------------------------------------------------------------------------------------------------------->
 

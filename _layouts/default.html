@@ -27,7 +27,69 @@ layout: compress
 
     {% include scripts.html %}
 
-    <script src="/assets/js/language-switcher.js"></script>
+    <script>
+      function getParameterByName(name) {
+        const url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+        const results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+      }
+    
+      const requestedLang = getParameterByName('lang') || 'es'; // Default: español
+      let found = false;
+    
+      // Ocultar todos los idiomas primero
+      const sections = document.querySelectorAll('section[lang]');
+      sections.forEach(sec => sec.style.display = 'none');
+    
+      // Intentar mostrar el idioma solicitado
+      sections.forEach(sec => {
+        if (sec.getAttribute('lang') === requestedLang) {
+          sec.style.display = 'block';
+          found = true;
+        }
+      });
+    
+      // Si no se encontró el idioma solicitado, intentar con español
+      if (!found) {
+        sections.forEach(sec => {
+          if (sec.getAttribute('lang') === 'es') {
+            sec.style.display = 'block';
+            found = true;
+          }
+        });
+      }
+    
+      // Si no hay español, mostrar el primer idioma disponible
+      if (!found && sections.length > 0) {
+        sections[0].style.display = 'block';
+      }
+
+      const translatableElements = document.querySelectorAll('[lang]');
+      translatableElements.forEach(el => el.style.display = 'none');
+
+      let langShown = false;
+      translatableElements.forEach(el => {
+        if (el.getAttribute('lang') === requestedLang) {
+          el.style.display = '';
+          langShown = true;
+        }
+      });
+
+      // Si no se encontró el idioma, mostrar español
+      if (!langShown) {
+        translatableElements.forEach(el => {
+          if (el.getAttribute('lang') === 'es') {
+            el.style.display = '';
+          }
+        });
+      }
+
+    </script>
+    
 
   </body>
 </html>

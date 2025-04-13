@@ -435,11 +435,19 @@
 
 .languages-tab {
   position: absolute;
-  right: 5px; top: 5px;
+  right: 5px; top: -10px;
+  display: flex;
+}
+
+.languages-tab a {
+  align-items: center;
+  margin-right: 10px;
+  margin-left:  10px;
 }
 
 .languages-tab svg {
   width:  40px;  /* Ajusta el tamaño del SVG si es necesario */
   height: 40px;
-  margin-right: 10px;
+  margin: 0px;
+  align-items: center;
 }
